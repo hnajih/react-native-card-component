@@ -1,19 +1,36 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import CardComponent from 'react-native-card-component';
+import { StyleSheet, View, SafeAreaView, Image } from 'react-native';
+import Card from 'react-native-card-component';
+import { Button, IconButton } from 'react-native-paper';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    CardComponent.multiply(3, 7).then(setResult);
-  }, []);
-
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Card>
+        <Card.Thumbnail
+          source={{ uri: 'https://picsum.photos/200' }}
+          style={{ height: 200, width: 300 }}
+          align={'center'}
+          // stretch
+          // imageProps={{resizeMode: 'contain'}}
+          containerStyle={{ justifyContent: 'center', alignItems: 'center' }}
+        />
+        <Card.Content>
+          <Card.Title
+            text={'Ex Lorem magna sint labore ex commodo dolor minim ad.'}
+          />
+          <Card.Row>
+            <Card.Col>
+              <Button mode={'outlined'}>demo</Button>
+            </Card.Col>
+            <Card.Col>
+              <Button mode={'contained'}>demo</Button>
+            </Card.Col>
+          </Card.Row>
+        </Card.Content>
+      </Card>
+    </SafeAreaView>
   );
 }
 
@@ -21,7 +38,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
+    // justifyContent: 'center',
+    backgroundColor: '#f7f7f7',
   },
   box: {
     width: 60,
