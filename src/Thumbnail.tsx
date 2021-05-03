@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, Image, ImageProps, ViewStyle, StyleSheet } from 'react-native';
 
-interface ThumbnailProps extends ImageProps {
+type ThumbnailProps = ImageProps & {
   children?: React.ReactChild;
   stretch?: boolean;
   align?: 'center' | 'left' | 'right';
   containerStyle?: ViewStyle;
-}
+};
 
 const Thumbnail = (props: ThumbnailProps) => {
   return (
@@ -35,4 +35,5 @@ const Thumbnail = (props: ThumbnailProps) => {
 Thumbnail.defaultProps = {
   align: 'left',
 };
+
 export default Thumbnail;

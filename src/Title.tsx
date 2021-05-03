@@ -1,14 +1,14 @@
 import React from 'react';
 import { View, Text, TextStyle } from 'react-native';
 
-interface TitleProps {
+type TitleProps = {
   text: string;
   fontSize?: number;
   color?: string;
   align?: 'left' | 'right' | 'center';
   bold?: boolean;
   style?: TextStyle;
-}
+};
 
 const Title = (props: TitleProps) => {
   const {

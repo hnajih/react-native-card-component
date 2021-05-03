@@ -12,7 +12,7 @@ import Thumbnail from './Thumbnail';
 import Row from './Row';
 import Col from './Col';
 
-interface CardProps {
+type CardProps = {
   children?: React.ReactNode;
   containerStyle?: ViewStyle;
   radius?: number;
@@ -23,7 +23,7 @@ interface CardProps {
   bg?: string;
   img_bg?: string;
   onPress?: () => void;
-}
+};
 
 const Card = (props: CardProps) => {
   const {

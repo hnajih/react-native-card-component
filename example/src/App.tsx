@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import { StyleSheet, View, SafeAreaView, Image } from 'react-native';
+import { StyleSheet, SafeAreaView } from 'react-native';
 import Card from 'react-native-card-component';
-import { Button, IconButton } from 'react-native-paper';
+import { Button } from 'react-native-paper';
 
 export default function App() {
   return (
